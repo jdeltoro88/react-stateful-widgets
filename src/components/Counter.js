@@ -44,11 +44,14 @@ STEP 5:
 
 STEP 6:
   This click handler needs to use 'setCount' to set the 'count' to be zero again.
-*/
+*/ 
 
-import React from 'react'; /* STEP 0 */
+import React,{ useState, useEffect } from 'react'; /* STEP 0 */
 
 export default function Counter() {
+  const [count, setCount] = useState(0);
+  console.log ('count', count);
+  console.log('setCount', count);
   /* STEP 1 */
 
   const increment = () => {
@@ -61,10 +64,18 @@ export default function Counter() {
     /* STEP 6 */
   };
 
+
+  /*STEP 2:
+  The 'style' object has the 'color' property hard-coded to "royalblue".
+  What the value of 'color' should be instead is a ternary expression that goes like this:
+  If count is even, then "royalblue", else "crimson".
+  */
+ 
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     color: 'royalblue', /* STEP 2 */
+
   };
 
   return (
