@@ -7,7 +7,7 @@
 body {
   background-color: rgb(244, 244, 244);
   color: rgb(65, 75, 60);
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
 }
 h2 {
   position: absolute;
@@ -15,7 +15,8 @@ h2 {
   left: 5%;
   transform-origin: center left;
 }
-button, input {
+button,
+input {
   margin: 3px;
   color: #7a6a6a;
   border: 1px solid rgb(210, 210, 210);
@@ -42,7 +43,7 @@ button, input {
 }
 @keyframes rotate {
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 .spinner {
@@ -54,7 +55,7 @@ button, input {
 .squares {
   display: grid;
   grid-template-columns: 50px 50px;
-  grid-template-rows: 50px 50px; 
+  grid-template-rows: 50px 50px;
   column-gap: 10px;
   row-gap: 10px;
 
@@ -73,4 +74,64 @@ button, input {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+.tictactoe {
+  display: flex;
+  flex-direction: column;
+}
+.board {
+  border: 2px solid white;
+  border-radius: 0px;
+  width: 150px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+li {
+  list-style: none;
+}
+.tictactoe-squares {
+  background: lightgray;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+}
+.X {
+  color: red;
+}
+.O {
+  color: green;
+}
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info-wrapper button {
+  background-color: lightgray;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0.25rem 0;
+}
+.todo-list {
+  background: #e8e8e8;
+  border-radius: 4px;
+  max-width: 1000px;
+  width: 600px;
+  padding: 5px;
+}
+.todo {
+  align-items: center;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  display: flex;
+  font-size: 24px;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  padding: 3px 10px;
 }
