@@ -34,7 +34,7 @@ function TodoForm({ addTodo }) {
         onChange={(e) => setValue(e.target.value)}
       />
       <button className="todo" onSubmit={handleSubmit}>
-        Add
+        Add task
       </button>
     </form>
   );
